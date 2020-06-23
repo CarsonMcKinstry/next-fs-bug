@@ -1,11 +1,12 @@
-import Head from "next/head";
+import Component from "../component";
 
 export default function Home() {
-  return <div></div>;
+  return <Component />;
 }
 
 export const getStaticProps = async () => {
+  const props = await Component.getInitializerProps();
   return {
-    props: {},
+    props,
   };
 };
